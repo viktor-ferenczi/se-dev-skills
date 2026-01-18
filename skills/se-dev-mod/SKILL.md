@@ -18,6 +18,10 @@ How to search for examples in the code of existing mods:
 Use only names matching the Mod API whitelist: [ModApiWhitelist.txt](ModApiWhitelist.txt)
 The whitelist was exported from game version `1.208.015` using MDK2's `Mdk.Extractor`.
 
+Mods are released on the Steam Workshop or Mod.IO, mostly on the former.
+Mods are compiled by the game on world loading with a Mod API whitelist enforced,
+which is supposed to guarantee safety and security. Mods may still crash the game with an exception.
+
 Use the `se-dev-game-code` skill to search the game's decompiled code. You may need this to
 understand how the game's internals work and how to interface with it properly. Stick to
 game code searches corresponding to names on the Mod API whitelist for efficiency.

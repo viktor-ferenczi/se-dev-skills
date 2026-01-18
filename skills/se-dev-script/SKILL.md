@@ -18,6 +18,16 @@ How to search for examples in the code of existing PB scripts:
 Use only names matching the PB API whitelist: [PBApiWhitelist.txt](PBApiWhitelist.txt)
 The whitelist was exported from game version `1.208.015` using MDK2's `Mdk.Extractor`.
 
+In-game (PB) scripts are released on the Steam Workshop or Mod.IO, mostly on the former.
+In-game scripts are compiled by the game on loading into the PB or world loading (if the PB has a script loaded)
+with a PB Script API whitelist enforced, which is supposed to guarantee safety and security. 
+Scripts cannot crash the game, since any exception is caught and the script is killed by the game.
+Scripts can still lag the game if no specific resource usage enforcement is set up by the player or server admin.
+
+The script's source code size is limited to 100,000 bytes when the player loads it. The ScriptDev plugin can load
+more from local file into offline (local) games for testing purposes, therefore scripts can be tested without
+source code compression, which is useful to get fully detailed exception tracebacks. 
+
 Use the `se-dev-game-code` skill to search the game's decompiled code. You may need this to
 understand how the game's internals work and how to script it properly. Stick to game code
 searches corresponding to names on the PB API whitelist for efficiency.
