@@ -3,11 +3,14 @@ name: se-dev-script
 description: Plugin development for Space Engineers version 1
 license: MIT
 ---
-Choose the appropriate documents for further details:
+Do the one-time preparation steps described in `Prepare.md`, but only if the `Prepare.DONE` file is missing.
+
+Read the appropriate documents for further details:
 - `Plugin.md` Plugin development (shared skills for both client and server)
 - `ClientPlugin.md` Client plugin development (relevant on client side)
 - `ServerPlugin.md` Server plugin development (relevant on server side)
 - `Guide.md` Use this to answer questions about the plugin development process in general.
+- `OtherPluginsAsExamples.md` How to look into the source code of other plugins as examples.
 
 Plugins are released exclusively on the PluginHub. All plugins must be open source, since they are compiled on
 the player's machine from the GitHub source revision identified by its PluginHub registration. Plugins are
@@ -16,6 +19,9 @@ Plugins are running native code and can do anything.
 
 Use the `se-dev-game-code` skill to search the game's decompiled code. You will need this to
 understand how the game's internals work and how to interface with it and patch it properly.
+
+NEVER use bash on Windows, always write cmd or PowerShell commands. 
+The `&&` delimiter does not work between `cmd` commands on Windows, use single `&` instead!
 
 References:
 - [Pulsar](https://github.com/SpaceGT/Pulsar) Plugin loader for Space Engineers

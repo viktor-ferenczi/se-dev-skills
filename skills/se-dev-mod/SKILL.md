@@ -9,6 +9,8 @@ How to search for examples in the code of existing mods:
 - A Python virtual environment in this folder was made available by the preparation.
 - Write short, reusable Python scripts to conduct custom code search. Strive for speed and minimal output. 
 - Use `uv run script_name.py` in this folder (as CWD) to run your scripts.
+- NEVER use bash on Windows, always write cmd or PowerShell commands. 
+- The `&&` delimiter does not work between `cmd` commands on Windows, use single `&` instead!
 - Python packages available (see `pyproject.toml` for the details if needed):
   - `lxml`
   - `tree-sitter` for C#, HLSL, JSON, Markdown, Python, XML
@@ -27,6 +29,7 @@ understand how the game's internals work and how to interface with it properly. 
 game code searches corresponding to names on the Mod API whitelist for efficiency.
 
 References:
-- [Mod Template repo](https://github.com/viktor-ferenczi/se-mod-template) mod script template repository to start a new project. See [ModTemplate.md](ModTemplate.md)
-- [Mod Development Kit (MDK2)](https://github.com/malforge/mdk2)
-- [Mod API for script mods](https://malforge.github.io/spaceengineers/modapi/index.html)
+- [Mod Template repo](https://github.com/viktor-ferenczi/se-mod-template) Mod template repository to start a new mod project which will include scripts. See [ModTemplate.md](ModTemplate.md)
+- [Mod API for script mods](https://malforge.github.io/spaceengineers/modapi/index.html) Structured Mod API documentation
+- [Mod API documentation by Keen Software House](https://github.com/KeenSoftwareHouse/SpaceEngineersModAPI) May be outdated
+- [Mod Development Kit (MDK2)](https://github.com/malforge/mdk2) Mod development tooling mostly for VS2022

@@ -9,6 +9,8 @@ How to search for examples in the code of existing PB scripts:
 - A Python virtual environment in this folder was made available by the preparation.
 - Write short, reusable Python scripts to conduct custom code search. Strive for speed and minimal output. 
 - Use `uv run script_name.py` in this folder (as CWD) to run your scripts.
+- NEVER use bash on Windows, always write cmd or PowerShell commands. 
+- The `&&` delimiter does not work between `cmd` commands on Windows, use single `&` instead!
 - Python packages available (see `pyproject.toml` for the details if needed):
   - `lxml`
   - `tree-sitter` for C#, Markdown, Python, XML

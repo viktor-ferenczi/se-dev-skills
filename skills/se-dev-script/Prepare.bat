@@ -31,11 +31,11 @@ echo Please fix the folder path on the `mklink` line in the `Prepare.bat` script
 goto failed
 :skip_steam_scripts
 
-if exist LocalMods goto skip_local_scripts
-echo Linking the game's local Mods folder as LocalScripts
-mklink /J LocalMods "%AppData%\SpaceEngineers\IngameScripts"
+if exist LocalScripts goto skip_local_scripts
+echo Linking the game's local IngameScript\local folder as LocalScripts
+mklink /J LocalScripts "%AppData%\SpaceEngineers\IngameScripts\local"
 if %ERRORLEVEL% EQU 0 goto skip_local_scripts
-echo ERROR: Missing local IngameScripts folder, this should not happen
+echo ERROR: Missing local IngameScripts\local folder, this should not happen
 goto failed
 :skip_local_scripts
 
