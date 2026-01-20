@@ -48,6 +48,12 @@ if %ERRORLEVEL% NEQ 0 goto failed
 
 rmdir /s /q Bin64
 
+if exist busybox.exe goto skip_busybox
+echo Downloading busybox
+uv run python -u download_busybox.py
+if %ERRORLEVEL% NEQ 0 goto failed
+:skip_busybox
+
 if exist Content goto skip_content
 echo Copying indexable content
 uv run python -u copy_content.py

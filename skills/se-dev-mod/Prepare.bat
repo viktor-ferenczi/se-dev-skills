@@ -22,6 +22,12 @@ echo Setting up Python .venv (uv sync)
 uv sync
 :skip_venv
 
+if exist busybox.exe goto skip_busybox
+echo Downloading busybox
+uv run python -u download_busybox.py
+if %ERRORLEVEL% NEQ 0 goto failed
+:skip_busybox
+
 if exist SteamMods goto skip_steam_mods
 echo Linking the Steam content folder as SteamMods
 mklink /J SteamMods "C:\Program Files (x86)\Steam\steamapps\workshop\content\244850"

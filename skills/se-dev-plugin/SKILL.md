@@ -20,8 +20,10 @@ Plugins are running native code and can do anything.
 Use the `se-dev-game-code` skill to search the game's decompiled code. You will need this to
 understand how the game's internals work and how to interface with it and patch it properly.
 
-NEVER use bash on Windows, always write cmd or PowerShell commands. 
-The `&&` delimiter does not work between `cmd` commands on Windows, use single `&` instead!
+General rules:
+- Use `busybox bash` to open a bash shell, which you can use easier, because it is close to UNIX.
+- Alternatively use the Windows PowerShell if busybox would not work for something.
+- On the Windows command line (cmd) (NOT on busybox!) use the `&` delimiter commands instead of `&&`.
 
 References:
 - [Pulsar](https://github.com/SpaceGT/Pulsar) Plugin loader for Space Engineers
