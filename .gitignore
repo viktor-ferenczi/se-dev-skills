@@ -207,6 +207,7 @@ marimo/_lsp/
 __marimo__/
 
 # Project specific
+/skills/se-dev-game-code/Bin64/
 /skills/se-dev-game-code/Decompiled/
 /skills/se-dev-game-code/Content/
 /skills/se-dev-game-code/CodeIndex/
