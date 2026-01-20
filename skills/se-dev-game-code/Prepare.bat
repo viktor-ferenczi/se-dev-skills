@@ -50,11 +50,19 @@ rmdir /s /q Bin64
 
 if exist Content goto skip_content
 echo Copying indexable content
-python -u copy_content.py
+uv run python -u copy_content.py
 if %ERRORLEVEL% NEQ 0 goto failed
 :skip_content
 
+if exist CodeIndex\variables.csv goto skip_index
+echo Indexing decompiled code
+mkdir CodeIndex 2>NUL
+uv run python -OO -u index_code.py Decompiled CodeIndex
+if %ERRORLEVEL% NEQ 0 goto failed
+:skip_index
+
 echo DONE
+del "\\?\%cd%\nul"
 echo DONE >Prepare.DONE
 exit /b 0
 
