@@ -1,5 +1,5 @@
 ---
-name: se-dev-script
+name: se-dev-mod
 description: Mod development for Space Engineers version 1
 license: MIT
 ---

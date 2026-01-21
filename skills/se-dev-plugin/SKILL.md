@@ -1,5 +1,5 @@
 ---
-name: se-dev-script
+name: se-dev-plugin
 description: Plugin development for Space Engineers version 1
 license: MIT
 ---

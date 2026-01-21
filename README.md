@@ -1,6 +1,6 @@
 # Space Engineers Developer Skills
 
-A [skill](https://code.claude.com/docs/en/skills) library for Space Engineers plugin, mod, and in-game script
+A [skill](https://agentskills.io) library for Space Engineers plugin, mod, and in-game script
 development.
 
 **This library applies only to version 1 of the game.**
@@ -11,12 +11,12 @@ development.
 2. **Run it once** to ensure the `.claude` folder is created in your home directory: `%USERPROFILE%\.claude`.
 3. **Clone this repository**
 4. Run the link script corresponding to your agentic coding tool or link/move the skills manually:
-   - Claude Code: `LinkIntoClaudeCode.bat`
-   - Cline: `LinkIntoCline.bat`
+   - [Claude Code](https://code.claude.com/docs/en/skills): `LinkIntoClaudeCode.bat` - Works out of the box.
+   - [Cline](https://docs.cline.bot/features/skills): `LinkIntoCline.bat` - Skills is an experimental feature in Cline, currently. Enable it in Cline's settings.
    - Other: See below *
 
-Claude should automatically detect these for new conversations. Please refer to the Claude documentation for more
-details on using skills.
+Your coding agent should automatically detect these the skills for new conversations.
+Please refer to the coding agent's documentation for more information on enabling and using skills.
 
 [*] You may be able to use these skills with other agentic coding tools than Claude Code and Cline.
 Follow the instructions of your specific agentic coding tool on where to place global skills and links the
