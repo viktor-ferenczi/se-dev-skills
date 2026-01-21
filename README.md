@@ -15,7 +15,7 @@ development.
    - [Cline](https://docs.cline.bot/features/skills): `LinkIntoCline.bat` - Skills is an experimental feature in Cline, currently. Enable it in Cline's settings.
    - Other: See below *
 
-Your coding agent should automatically detect these the skills for new conversations.
+Your coding agent should automatically detect the newly added skills from the next conversation.
 Please refer to the coding agent's documentation for more information on enabling and using skills.
 
 [*] You may be able to use these skills with other agentic coding tools than Claude Code and Cline.
