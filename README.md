@@ -9,15 +9,19 @@ development.
 
 1. **Install [Claude Code](https://claude.com/product/claude-code).**
 2. **Run it once** to ensure the `.claude` folder is created in your home directory: `%USERPROFILE%\.claude`.
-3. **Clone this repository** and run `LinkIntoClaudeCodeSkills.bat` to link the skill folders.
+3. **Clone this repository**
+4. Run the link script corresponding to your agentic coding tool or link/move the skills manually:
+   - Claude Code: `LinkIntoClaudeCode.bat`
+   - Cline: `LinkIntoCline.bat`
+   - Other: See below *
 
 Claude should automatically detect these for new conversations. Please refer to the Claude documentation for more
 details on using skills.
 
-You may be able to use these skills with other agentic coding tools, for example [Cline](https://cline.bot/).
+[*] You may be able to use these skills with other agentic coding tools than Claude Code and Cline.
 Follow the instructions of your specific agentic coding tool on where to place global skills and links the
-folders under `skills` in this repository there. You may customize the above batch file to do so and make
-a PR with your batch file, so others can also use it.
+folders under `skills` in this repository there. You may customize one of the above batch files to do so and
+make a PR with your batch file, so others can also use it.
 
 ## Preparation
 
