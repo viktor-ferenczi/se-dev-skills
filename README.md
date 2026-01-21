@@ -17,7 +17,7 @@ details on using skills.
 You may be able to use these skills with other agentic coding tools, for example [Cline](https://cline.bot/).
 Follow the instructions of your specific agentic coding tool on where to place global skills and links the
 folders under `skills` in this repository there. You may customize the above batch file to do so and make
-a PR with your batch file, so others can also use it. _Thanks!_
+a PR with your batch file, so others can also use it.
 
 ## Preparation
 
@@ -27,7 +27,7 @@ to prepare. If some skill were messed up, just delete that skill folder, rollbac
 Also make sure to pull any updates to this repository, they may need to repeat the preparation on large changes.
 
 **Note:** Preparing the `se-dev-game-code` skill may take 10–15 minutes, as it fully decompiles the game and builds code
-indexes to allow for rapid searching later.
+indexes to allow for rapid code search later.
 
 The fully prepared repository takes about **1.5 GB** of disk space due to the code index. If you need to save space, you
 can delete all `*.il` files (approx. **660 MB**). These are only required for transpiler and preloader patch
@@ -71,7 +71,7 @@ Contributions via PR are very welcome.
 ### Does Claude Code know about the mod and script API whitelists?
 
 I have exported the current whitelists (as of game version 1.208.015) using [MDK2](https://github.com/malforge/mdk2).
-This may need future updates or automation during the preparation phase. Credits to **Malware** for the exporter tool.
+This may need future updates or automation during the preparation phase.
 
 If you use the suggested mod or script template projects and the **ScriptMerge** tool, there is no formal whitelist
 validation during build time. It may fail when loading into the game, but if you provide the relevant game logs to
@@ -92,7 +92,7 @@ If you suspect something is not working in these skills, then issue the followin
 
 ```md
 Check whether you can see these skills:
-- `se-dev-script
+- `se-dev-script`
 - `se-dev-mod`
 - `se-dev-plugin`
 - `se-dev-game-code`
@@ -112,10 +112,10 @@ All four skills are visible and prepared for first use.
 
 | Skill | Status | Key Features Verified |
 |-------|--------|----------------------|
-| **se-dev-script** | ✅ Ready | Preparation complete, ModApiWhitelist.txt available, Python 3.13.2 via uv |
-| **se-dev-mod** | ✅ Ready | SteamMods symlink working, LocalMods symlink working, Python 3.13.2 via uv |
-| **se-dev-plugin** | ✅ Ready | All documentation (Plugin.md, Guide.md, Patching.md, etc.) accessible, Python 3.13.2 via uv |
-| **se-dev-game-code** | ✅ Ready | Decompiled/ folder with game assemblies, Content/ folder, CodeIndex/ with CSV indexes, code search working |
+| **se-dev-script** | ✅Ready | Preparation complete, ModApiWhitelist.txt available, Python 3.13.2 via uv |
+| **se-dev-mod** | ✅Ready | SteamMods symlink working, LocalMods symlink working, Python 3.13.2 via uv |
+| **se-dev-plugin** | ✅Ready | All documentation (Plugin.md, Guide.md, Patching.md, etc.) accessible, Python 3.13.2 via uv |
+| **se-dev-game-code** | ✅Ready | Decompiled/ folder with game assemblies, Content/ folder, CodeIndex/ with CSV indexes, code search working |
 
 ### Nothing Missing or Broken
 
