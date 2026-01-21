@@ -5,16 +5,15 @@ license: MIT
 ---
 Do the one-time preparation steps described in `Prepare.md`, but only if the `Prepare.DONE` file is missing.
 
-How to search for examples in the code of existing PB scripts:
+How to build custom tool script to conduct search and for other tasks:
 - A Python virtual environment in this folder was made available by the preparation.
-- Write short, reusable Python scripts to conduct custom code search. Strive for speed and minimal output. 
+- Use this Python virtual environment to write short, targeted, reusable utility scripts as needed. 
+  Build a catalog of such scripts in `UtilityScripts.md` next to this skill file. 
 - Use `uv run script_name.py` in this folder (as CWD) to run your scripts.
 - Use `busybox bash` to open a bash shell, which you can use easier, because it is close to UNIX.
 - Alternatively use the Windows PowerShell if busybox would not work for something.
 - On the Windows command line (cmd) (NOT on busybox!) use the `&` delimiter commands instead of `&&`.
-- Python packages available (see `pyproject.toml` for the details if needed):
-  - `lxml`
-  - `tree-sitter` for C#, Markdown, Python, XML
+- See the list of available Python packages in `pyproject.toml`.
 - The `SteamScripts` folder contains game content (mods, scripts, blueprints) the player downloaded. Filter scripts by the existence of a `Script.cs` file directly in the numbered content folder. 
 - The `LocalScripts` folder contains mods the player is developing. It is a link to `%AppData%/SpaceEngineers/IngameScripts`.
 
