@@ -41,7 +41,7 @@ uv sync
 
 if exist busybox.exe goto skip_busybox
 echo Downloading busybox
-uv run python -u download_busybox.py
+powershell -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://frippery.org/files/busybox/busybox64u.exe -OutFile busybox.exe"
 if %ERRORLEVEL% NEQ 0 goto failed
 :skip_busybox
 
