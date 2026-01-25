@@ -54,12 +54,19 @@ _Enjoy!_
 
 ## Manual installation
 
-1. Clone this repository
-2. Move or link the skills into the `skills` folder of your agentic coding environment
+You can also install the skills manually:
 
-Link command: `mklink /J Link Target`
-- Link: A new folder in the agentic coding environment's own `skills` folder.
-- Target: The existing skill folder in your cloned repository.
+1. Clone this repository
+2. Run one of the installation scripts from the `install` folder:
+
+| Target Environment | Script |
+|-------------------|--------|
+| Claude Code | `install\claude.bat` |
+| Cline | `install\cline.bat` |
+| OpenCode | `install\opencode.bat` |
+| Custom location | `install\generic.bat <target_skills_folder>` |
+
+The scripts create junction points (symlinks) from the target skills folder to this repository.
 
 ## FAQ
 
