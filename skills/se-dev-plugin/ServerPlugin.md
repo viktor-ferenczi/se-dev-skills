@@ -34,5 +34,10 @@ Folder structure of a client-server (multi-targeted) plugin:
 - `TorchPlugin`: Code specific to the Torch Server.
 - `TorchPlugin\ConfigView.xaml`: Description of the plugin configuration form loaded by the Torch Server.
 
+Conditional compilation for specific targets:
+- `DedicatedPlugin` defines `DEDICATED`
+- `TorchPlugin` defines `TORCH`
+- `ClientPlugin` is `!DEDICATED && !TORCH` 
+
 References:
 - [Client and server (both DS and Torch) plugin template](https://github.com/viktor-ferenczi/se-server-plugin-template) Template repository to start a new project.
