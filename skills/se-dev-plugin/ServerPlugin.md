@@ -27,7 +27,7 @@ Folder structure of a client-server (multi-targeted) plugin:
 - `Shared/Logging`: Shared logging interface and log formatting code.
 - `Shared/Patches`: Use this folder and namespace to host the Harmony patches. 
 - `Shared/Plugin`: Shared plugin initialization and update handler code.
-- `Shared/Tools`: Shared utility code for transpiler patches, detecting game code changes by IL code hash and checking if the game runs on Linux (Wine/Proton). Code to uncomment if you need to use publicizer to access internal, protected or private members in the original game code (optional).
+- `Shared/Tools`: Shared utility code for transpiler patches, detecting game code changes by IL code hash and checking if the game runs on Linux (Wine/Proton).
 - `ClientPlugin`: Pulsar builds only the source code under this folder or its subdirectories. You can find plugin initialization, configuration and logging directly in this folder.
 - `ClientPlugin/Settings`: Reusable configuration dialog components. See `Config.cs` in the project directory on usage examples.
 - `DedicatedPlugin`: Code specific to the Dedicated Server.

@@ -20,6 +20,7 @@ Read the appropriate documents for further details:
 - `ClientPlugin.md` Client plugin development (relevant on client side)
 - `ServerPlugin.md` Server plugin development (relevant on server side)
 - `Guide.md` Use this to answer questions about the plugin development process in general.
+- `Publicizer.md` How to use the Krafs publicizer to access internal, protected or private members in the original game code (optional).
 - `OtherPluginsAsExamples.md` How to look into the source code of other plugins as examples.
 
 Plugins are released exclusively on the PluginHub. All plugins must be open source, since they are compiled on
