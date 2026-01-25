@@ -1,49 +1,45 @@
 # Space Engineers Developer Skills
 
-A [skill](https://agentskills.io) library for Space Engineers plugin, mod, and in-game script
-development.
+A [skill](https://agentskills.io) library for Space Engineers plugin, mod, and in-game script development.
 
 **This library applies only to version 1 of the game.**
 
 ## How to use
 
-1. **Install [Claude Code](https://claude.com/product/claude-code).**
-2. **Run it once** to ensure the `.claude` folder is created in your home directory: `%USERPROFILE%\.claude`.
-3. **Clone this repository**
-4. Run the link script corresponding to your agentic coding tool or link/move the skills manually:
-   - [Claude Code](https://code.claude.com/docs/en/skills): `LinkIntoClaudeCode.bat` - Works out of the box.
-   - [Cline](https://docs.cline.bot/features/skills): `LinkIntoCline.bat` - Skills is an experimental feature in Cline, currently. Enable it in Cline's settings.
-   - Other: See below *
+You must have a "skills" compatible agentic coding environment. 
+See [agentskills.io](https://agentskills.io) or [skills.sh](https://skills.sh) for details.
 
-Your coding agent should automatically detect the newly added skills from the next conversation.
-Please refer to the coding agent's documentation for more information on enabling and using skills.
+### Install with skills.sh
 
-[*] You may be able to use these skills with other agentic coding tools than Claude Code and Cline.
-Follow the instructions of your specific agentic coding tool on where to place global skills and links the
-folders under `skills` in this repository there. You may customize one of the above batch files to do so and
-make a PR with your batch file, so others can also use it.
+`npx skills add viktor-ferenczi/se-dev-skills`
+
+Follow the wizard.
+
+### Alternative install
+
+1. Clone this repository
+2. Move or link the skills into the `skills` folder of your agentic coding environment
 
 ## Preparation
 
-Skills automatically prepare themselves on **first use** (downloading and indexing). If you want to prepare them ahead
-of time, simply run `PrepareAllSkills.bat`. Alternatively run `Prepare.bat` inside each of the skill folders you want
-to prepare. If some skill were messed up, just delete that skill folder, rollback from Git and prepare it again.
-Also make sure to pull any updates to this repository, they may need to repeat the preparation on large changes.
+The skills will automatically prepare themselves on **first use** (downloading and indexing). If you want to prepare
+them ahead of time, simply run `Prepare.bat` in their respective folders.
 
-**Note:** Preparing the `se-dev-game-code` skill may take 10–15 minutes, as it fully decompiles the game and builds code
-indexes to allow for rapid code search later.
+**Note:** Preparing the `se-dev-game-code` skill may take 5–15 minutes, as it fully decompiles the game and builds
+code indexes to allow for rapid code search later. The fully prepared repository takes about **1.5 GB** of disk space
+due to the code index. If you need to save space, you can delete all `*.il` files (approx. **660 MB**), which are
+only required for working on transpiler or preloader patches.
 
-The fully prepared repository takes about **1.5 GB** of disk space due to the code index. If you need to save space, you
-can delete all `*.il` files (approx. **660 MB**). These are only required for transpiler and preloader patch
-development, advanced topics that are rarely needed.
+## Updates
+
+Just delete the skill's folder and install it again. There is no auto-updater, currently.
 
 ## Skills
 
 * [se-dev-script](https://www.google.com/search?q=skills/se-dev-script/SKILL.md) – In-game script development
 * [se-dev-mod](https://www.google.com/search?q=skills/se-dev-mod/SKILL.md) – Mod development
 * [se-dev-plugin](https://www.google.com/search?q=skills/se-dev-plugin/SKILL.md) – Plugin development
-* [se-dev-game-code](https://www.google.com/search?q=skills/se-dev-game-code/SKILL.md) – Searchable decompiled C# game
-  code
+* [se-dev-game-code](https://www.google.com/search?q=skills/se-dev-game-code/SKILL.md) – Searchable decompiled C# game code
 
 _Enjoy!_
 
