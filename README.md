@@ -9,46 +9,57 @@ A [skill](https://agentskills.io) library for Space Engineers plugin, mod, and i
 You must have a "skills" compatible agentic coding environment. 
 See [agentskills.io](https://agentskills.io) or [skills.sh](https://skills.sh) for details.
 
-### Install with skills.sh
+## Installation
 
 `npx skills add viktor-ferenczi/se-dev-skills`
 
 Follow the wizard.
 
-### Alternative install
+Later you can update them by: `npx skills update`
 
-1. Clone this repository
-2. Move or link the skills into the `skills` folder of your agentic coding environment
+In case you don't want to use `skills.sh`, then please see the "Manual installation" section below. 
 
 ## Preparation
 
-The skills will automatically prepare themselves on **first use** (downloading and indexing). If you want to prepare
-them ahead of time, simply run `Prepare.bat` in their respective folders.
+The skills will automatically prepare themselves on **first use**. It means downloading some tools and indexing code.
+If you want to prepare them ahead of time, simply run `Prepare.bat` in their respective folders.
 
 **Note:** Preparing the `se-dev-game-code` skill may take 5–15 minutes, as it fully decompiles the game and builds
 code indexes to allow for rapid code search later. The fully prepared repository takes about **1.5 GB** of disk space
 due to the code index. If you need to save space, you can delete all `*.il` files (approx. **660 MB**), which are
 only required for working on transpiler or preloader patches.
 
-## Updates
+All skills install BusyBox (`busybox.exe`) into their folder for use by agentic coding tools for UNIX like commands,
+because AI models are bad at Windows commands and often fall back to the UNIX CLI tools even if told otherwise. It
+has improved efficiency a lot, therefore this is currently a requirement. 
 
-Just delete the skill's folder and install it again. There is no auto-updater, currently.
+If you want to use BusyBox in your other projects, then this is also available as a separate skill:
+`npx skills add https://github.com/viktor-ferenczi/skills --skill busybox-on-windows`
 
 ## Skills
 
 * [se-dev-script](https://www.google.com/search?q=skills/se-dev-script/SKILL.md) – In-game script development
 * [se-dev-mod](https://www.google.com/search?q=skills/se-dev-mod/SKILL.md) – Mod development
 * [se-dev-plugin](https://www.google.com/search?q=skills/se-dev-plugin/SKILL.md) – Plugin development
-* [se-dev-game-code](https://www.google.com/search?q=skills/se-dev-game-code/SKILL.md) – Searchable decompiled C# game code
+* [se-dev-game-code](https://www.google.com/search?q=skills/se-dev-game-code/SKILL.md) – Searchable decompiled C# game code (recommended companion for all the other skills)
 
 _Enjoy!_
-
----
 
 ## Want to know more?
 
 - [SE Mods Discord](https://discord.gg/PYPFPGf3Ca) FAQ, Troubleshooting, Support, Bug Reports, Discussion
 - [Pulsar Discord](https://discord.gg/z8ZczP2YZY) Everything about plugins
+
+---
+
+## Manual installation
+
+1. Clone this repository
+2. Move or link the skills into the `skills` folder of your agentic coding environment
+
+Link command: `mklink /J Link Target`
+- Link: A new folder in the agentic coding environment's own `skills` folder.
+- Target: The existing skill folder in your cloned repository.
 
 ## FAQ
 
