@@ -64,7 +64,7 @@ You can also install the skills manually:
 | Claude Code | `install\claude.bat` |
 | Cline | `install\cline.bat` |
 | OpenCode | `install\opencode.bat` |
-| Custom location | `install\generic.bat <target_skills_folder>` |
+| Custom location | `install\install.bat <target_skills_folder>` |
 
 The scripts create junction points (symlinks) from the target skills folder to this repository.
 
