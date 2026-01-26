@@ -97,7 +97,7 @@ Claude Code, it can usually identify and fix the issue.
 
 ### How does Claude Code load this much information into the context?
 
-It doesn't! Skills work on the principle of **"progressive disclosure."** Claude Code initially sees only the top-level
+It doesn't! Skills work on the principle of **progressive disclosure**. Claude Code initially sees only the top-level
 skill names and descriptions. It then gradually "discovers" more information as needed for the task. It has been given
 specific instructions on how to search the SE codebase efficiently so it doesn't get overwhelmed.
 
